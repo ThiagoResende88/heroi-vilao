@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova - Herói e Vilão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Div do Herói -->
+        <div class="personagem">
+            <div class="barra-vida" :style="{width: heroi.vida + '%'}">{{ heroi.vida }}</div>
+            <div class="sprite">
+                <img src="heroi.png" alt="Herói" class="personagem-img">
+            </div>
+            <h1>Herói</h1>
+            <div class="acoes">
+                <button @click="atacar(true)">Atacar</button>
+                <button @click="defender(true)">Defender</button>
+                <button @click="usarPocao(true)">Usar Poção</button>
+                <button @click="correr(true)">Correr</button>
+            </div>
+        </div>
+        <!-- Div do Vilão -->
+        <div class="personagem">
+            <div class="barra-vida" :style="{width: vilao.vida + '%'}">{{ vilao.vida }}</div>
+            <div class="sprite">
+                <img src="vilao.png" alt="Vilão" class="personagem-img">
+            </div>
+            <h1>Vilão</h1>
+        </div>
+    </div>
+    <!-- Div do Log de Ações -->
+    <div class="log" id="logAcoes">
+        <h2>Log de Ações</h2>
+        <ul>
+            <li v-for="(acao, index) in logAcoes" :key="index"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script src="index.js"></script>

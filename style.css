@@ -1,0 +1,102 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#app {
+    width: 80%;
+    max-width: 100vw; /* Define o tamanho máximo como 100% da largura da viewport */
+    padding: 20px; /* Adiciona um espaço de 20px ao redor do conteúdo */
+    text-align: center;
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho total */
+}
+
+.personagens {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Adiciona um espaçamento entre os personagens e o log de ações */
+}
+
+.personagem {
+    background-color: #a6c1e5;
+    border: 2px solid #1a355e;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+}
+
+.personagem-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px; /* Altura máxima */
+}
+
+.sprite {
+    position: relative;
+}
+
+.sprite span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #73295c;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3d0525;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0px);
+}
+
+.barra-vida {
+    height: 32px;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.log {
+    width: 200px;
+    background-color: #d5eeac;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
